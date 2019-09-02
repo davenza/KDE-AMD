@@ -846,7 +846,9 @@ class EqualFrequencyLimits(object):
     """
     Divides the space by EQUAL_FREQUENCY. Refer to :class:`SymbolizationType` and :class:`DivisionOrder`.
     """
-    def __init__(self, train_obs_set, n_cell_col, n_cell_row, division_order):
+    def __init__(self, train_obs_set, n_cell_col, n_cell_row, division_order, seed=0):
+        random.seed(seed)
+
         self.division_order = division_order
 
         if division_order == DivisionOrder.ROWS_THEN_COLUMNS:
@@ -943,8 +945,8 @@ class EqualFrequencyLimitsNoBounds(EqualFrequencyLimits):
     """
     Divides the space by EQUAL_FREQUENCY_NO_BOUNDS. Refer to :class:`SymbolizationType`.
     """
-    def __init__(self, train_obs_set, n_cell_col, n_cell_row, division_order):
-        super(EqualFrequencyLimitsNoBounds, self).__init__(train_obs_set, n_cell_col, n_cell_row, division_order)
+    def __init__(self, train_obs_set, n_cell_col, n_cell_row, division_order, seed=0):
+        super(EqualFrequencyLimitsNoBounds, self).__init__(train_obs_set, n_cell_col, n_cell_row, division_order, seed)
 
     def _generate_limits(self, train_obs_set):
         """
