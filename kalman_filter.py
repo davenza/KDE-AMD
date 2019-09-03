@@ -128,8 +128,8 @@ if __name__ == '__main__':
 
     Qk = np.eye(4)
     Rk = np.eye(4)
-    PkMinus = np.eye(4)
-    initialStatus = np.asarray([16, 16, 0, 0])
+    Pk_minus = np.eye(4)
+    initial_status = np.asarray([16, 16, 0, 0])
 
     if not os.path.isdir('results/KalmanFilter'):
         os.mkdir('results/KalmanFilter')
@@ -141,4 +141,4 @@ if __name__ == '__main__':
         if not os.path.isdir(result_folder):
             os.mkdir(result_folder)
 
-        evaluate_model(Fk, Hk, Qk, Rk, PkMinus, initialStatus, data_folder, result_folder + "/KalmanFilter")
+        evaluate_model(Fk, Hk, Qk, Rk, Pk_minus, initial_status, data_folder, result_folder + "/KalmanFilter")
