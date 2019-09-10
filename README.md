@@ -15,7 +15,7 @@ It implements the following algorithms:
 
 ## `data/`
 
-Contains the data of the laser heat treatment. It should have a subfolder for each batch type (Type1, ..., Type36).
+Contains the data of the laser heat treatment. It should have a subfolder for each batch type (Type1, ..., Type36). See the data [README](data/README.MD) for details on the structure of the data.
 
 ## `nn_positions_models/`
 
