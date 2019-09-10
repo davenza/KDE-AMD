@@ -8,6 +8,8 @@ An easy way to decompress all the zip files in a Linux environment is:
 find . -name "*.zip" -exec unzip {} \;
 ```
 
+From the folder that contains all the zip files.
+
 Abstract
 ----------------------------
 This data set comprises 4223 videos from a laser surface heat treatment process (also called laser heat treatment) applied to cylindrical workpieces made of steel. The purpose of the dataset is to detect anomalies in the laser heat treatment learning a model from a set of non-anomalous videos.
